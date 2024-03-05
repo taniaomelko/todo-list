@@ -1,0 +1,31 @@
+/* Box sizing reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Margin and padding reset */
+html, body, div, h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* Reset heading margins */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Reset paragraph margins */
+p {
+  margin: 0;
+}
+
+/* Reset form elements */
+input {
+  font: inherit;
+  margin: 0;
+  outline: none;
+}

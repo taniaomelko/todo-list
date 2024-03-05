@@ -1,0 +1,13 @@
+@import '../../scss/variables';
+
+.todo-list-filter {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.todo-list-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

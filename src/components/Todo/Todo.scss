@@ -1,0 +1,35 @@
+@import '../../scss/variables';
+
+.todo-icon {
+  flex-shrink: 0;
+  color: $color-red;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: $color-white;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 20px rgb($color-black, 0.12);
+
+  &.completed {
+    .todo-icon {
+      color: $color-green;
+    }
+  }
+}
+
+.todo-title {
+  font-size: $font-16;
+  line-height: 1.2;
+  font-weight: 500;
+  transition: opacity 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
