@@ -27,9 +27,11 @@ export const TodoForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
-    dispatch(addTodoAction(title) as AddTodosTypeAction)
-    dispatch(filterTodosAction(filter) as FilterTodosActionType)
-    setTitle('')
+    if (title.trim()) {
+      dispatch(addTodoAction(title) as AddTodosTypeAction)
+      dispatch(filterTodosAction(filter) as FilterTodosActionType)
+      setTitle('')
+    }
   }
 
   return (
