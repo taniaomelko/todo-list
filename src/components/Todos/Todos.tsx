@@ -1,7 +1,8 @@
-import './Todos.scss'
-import { TodoList } from '../TodoList/TodoList'
-import { TodoForm } from '../TodoForm/TodoForm'
-import { Statistics } from '../Statistics/Statistics'
+import React from 'react'
+import './todos.scss'
+import { TodoList } from '../todo-list/todo-list'
+import { TodoForm } from '../todo-form/todo-form'
+import { Statistics } from '../statistics/statistics'
 
 export const Todos: React.FC = () => {
   return (

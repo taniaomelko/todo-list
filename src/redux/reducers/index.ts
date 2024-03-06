@@ -1,8 +1,8 @@
-import { combineReducers } from "redux"
-import { TodoListReducer } from "./todoList"
+import { combineReducers } from 'redux'
+import { TodoListReducer } from './todo-list'
 
 export const RootReducer = combineReducers({
-  todos: TodoListReducer,
+  'todos': TodoListReducer,
 })
 
 export type RootState = ReturnType<typeof RootReducer>

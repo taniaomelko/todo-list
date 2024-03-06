@@ -1,17 +1,14 @@
 import axios from 'axios'
-import { ITodo } from '../types/ITodo'
+import { ITodo } from '../types/i-todo'
 
-const URL = process.env.PUBLIC_URL + '/api/api.json'
+const URL = `${process.env.PUBLIC_URL}/api/api.json`
 
 const fetchData = async (): Promise<ITodo[]> => {
   try {
     const response = await axios.get(URL)
-    console.log(response.data)
-
     return response.data
   } catch (error) {
-    console.error('Error fetching data:', error)
-    throw error
+    throw new Error(`Error fetching data: ${error}`)
   }
 }
 

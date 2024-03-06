@@ -1,11 +1,12 @@
-import { useState } from 'react'
-import './Todo.scss'
+import React, { useState } from 'react'
+import './todo.scss'
 import { useDispatch, useSelector } from 'react-redux'
-import { ITodo } from '../../types/ITodo'
+import { ITodo } from '../../types/i-todo'
 import { CrossIcon, CheckIcon } from '../icons'
 import { toggleTodoAction, filterTodosAction } from '../../redux/actions'
 import { RootState } from '../../redux/reducers'
-import { ToggleTodoActionType, FilterTodosActionType } from "../../types/ActionTypes"
+import { ToggleTodoActionType, FilterTodosActionType }
+  from '../../types/action-types'
 
 interface TodoProps {
   todo: ITodo

@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import './TodoForm.scss'
+import './todo-form.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { addTodoAction, filterTodosAction } from '../../redux/actions'
 import { RootState } from '../../redux/reducers'
-import { AddTodosTypeAction, FilterTodosActionType } from "../../types/ActionTypes"
+import { AddTodosTypeAction, FilterTodosActionType }
+  from '../../types/action-types'
 
 export const TodoForm: React.FC = () => {
   const [title, setTitle] = useState<string>('')
@@ -25,8 +26,8 @@ export const TodoForm: React.FC = () => {
     }
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
-    e.preventDefault()
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
+    event.preventDefault()
     if (title.trim()) {
       dispatch(addTodoAction(title) as AddTodosTypeAction)
       dispatch(filterTodosAction(filter) as FilterTodosActionType)
@@ -42,15 +43,15 @@ export const TodoForm: React.FC = () => {
         onChange={handleChange}
         placeholder="Enter new todo title"
       />
-      <button 
-        type="submit" 
+      <button
+        type="submit"
         className="button button-primary"
         disabled={disabled}
       >
         Add Todo
       </button>
 
-      {disabled && 
+      {disabled &&
         <p className="todo-form-error">
           {`Maximum ${maxSymbols} symbols allowed for a todo.`}
         </p>

@@ -1,22 +1,27 @@
-import { ITodo } from "../../types/ITodo"
-import { FilterTodosActionType, FetchTodosActionType, ToggleTodoActionType, AddTodosTypeAction } from "../../types/ActionTypes"
+import { ITodo } from '../../types/i-todo'
+import {
+  FilterTodosActionType,
+  FetchTodosActionType,
+  ToggleTodoActionType,
+  AddTodosTypeAction,
+} from '../../types/action-types'
 
 export const fetchTodosAction = (todos: ITodo[]): FetchTodosActionType => ({
-  type: 'FETCH_TODOS',
-  payload: todos,
+  'type': 'FETCH_TODOS',
+  'payload': todos,
 })
 
 export const filterTodosAction = (filter: string): FilterTodosActionType => ({
-  type: 'FILTER_TODOS',
-  payload: filter,
+  'type': 'FILTER_TODOS',
+  'payload': filter,
 })
 
 export const toggleTodoAction = (id: number): ToggleTodoActionType => ({
-  type: 'TOGGLE_TODO',
-  payload: id,
+  'type': 'TOGGLE_TODO',
+  'payload': id,
 })
 
 export const addTodoAction = (todoTitle: string): AddTodosTypeAction => ({
-  type: 'ADD_TODO',
-  payload: todoTitle,
+  'type': 'ADD_TODO',
+  'payload': todoTitle,
 })

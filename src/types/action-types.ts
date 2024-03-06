@@ -1,4 +1,4 @@
-import { ITodo } from "./ITodo"
+import { ITodo } from './i-todo'
 
 export type FetchTodosActionType = {
   type: string

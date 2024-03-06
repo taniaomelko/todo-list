@@ -8,5 +8,5 @@ declare global {
 }
 
 export const getStore = (): Store => configureStore({
-  reducer: RootReducer,
+  'reducer': RootReducer,
 })
